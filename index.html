@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    /* Add some style to your portfolio page */
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .bio {
+      padding: 20px;
+      margin-top: 80px;
+    }
+
+    .bio h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .bio p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .project {
+      width: 30%;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .project:hover {
+      transform: scale(1.1);
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .project h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .project p {
+      font-size: 14px;
+      color: #666;
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Your Name</h1>
+  </header>
+  <section class="bio">
+    <h2>About Me</h2>
+    <p>Add a brief bio or introduction here.</p>
+  </section>
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="project1.jpg" alt="Project 1">
+      <h3>Project 1</h3>
+      <p>Add a description of your project here.</p>
+    </div>
+    <div class="project">
+      <img src="project.jpg" alt="Project 2">
+      <h3>Project 2</h3>
+      <p>Add a description of your project here.</p>
+    </div>
+    <div class="project">
+      <img src="project3.jpg" alt="Project 3">
+      <h3>Project 3</h3>
+      <p>Add a description of your project here.</p>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>Contact me at <a href="mailto:your@email.com">your@email.com</a></p>
+  </footer>
+  <script>
+    // Add an smooth scroll effect to the page
+    const header = document.querySelector('.header');
+    const bio = document.querySelector('.bio');
+    const projects = document.querySelector('.projects');
+    const footer = document.querySelector('.footer');
+
+    header.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    bio.addEventListener('click', () => {
+      window.scrollTo({ top: header.offsetHeight, behavior: 'smooth' });
+    });
+
+    projects.addEventListener('click', () => {
+      const top = header.offsetHeight + bio.offsetHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+
+    footer.addEventListener('click', () => {
+      const top = document.body.scrollHeight - window.innerHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
+2
